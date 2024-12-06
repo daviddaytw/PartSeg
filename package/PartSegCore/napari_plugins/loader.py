@@ -1,6 +1,6 @@
-from os import path
 import typing
 from importlib.metadata import version
+from os import path
 
 import numpy as np
 from packaging.version import parse as parse_version
@@ -59,7 +59,11 @@ def _image_to_layers(project_info, scale, translate):
         res_layers.append(
             (
                 project_info.image.get_channel(0),
-                {"scale": scale, "name": f"{layer_name_prefix} {project_info.image.channel_names[0]}", "translate": translate},
+                {
+                    "scale": scale,
+                    "name": f"{layer_name_prefix} {project_info.image.channel_names[0]}",
+                    "translate": translate,
+                },
                 "labels",
             )
         )
