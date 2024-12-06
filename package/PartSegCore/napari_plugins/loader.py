@@ -1,3 +1,4 @@
+from os import path
 import typing
 from importlib.metadata import version
 
@@ -52,12 +53,13 @@ else:
 
 
 def _image_to_layers(project_info, scale, translate):
+    layer_name_prefix = path.basename(project_info.file_path)
     res_layers = []
     if project_info.image.name == "ROI" and project_info.image.channels == 1:
         res_layers.append(
             (
                 project_info.image.get_channel(0),
-                {"scale": scale, "name": project_info.image.channel_names[0], "translate": translate},
+                {"scale": scale, "name": f"{layer_name_prefix} {project_info.image.channel_names[0]}", "translate": translate},
                 "labels",
             )
         )
@@ -67,7 +69,7 @@ def _image_to_layers(project_info, scale, translate):
                 project_info.image.get_channel(i),
                 {
                     "scale": scale,
-                    "name": project_info.image.channel_names[i],
+                    "name": f"{layer_name_prefix} {project_info.image.channel_names[i]}",
                     "blending": "additive",
                     "translate": translate,
                     "metadata": project_info.image.metadata,
