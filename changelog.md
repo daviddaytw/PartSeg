@@ -100,9 +100,9 @@ This release drop support for python 3.8 and napari below 0.4.19.
 - Fix coverage files upload by enable hidden files upload ([#1186](https://github.com/4DNucleome/PartSeg/pull/1186))
 - \[pre-commit.ci\] pre-commit autoupdate ([#1184](https://github.com/4DNucleome/PartSeg/pull/1184))
 - Use PyQt6 in pre-tests ([#1196](https://github.com/4DNucleome/PartSeg/pull/1196))
-- Add missed code from  #1191 ([#1197](https://github.com/4DNucleome/PartSeg/pull/1197))
+- Add missed code from #1191 ([#1197](https://github.com/4DNucleome/PartSeg/pull/1197))
 - \[pre-commit.ci\] pre-commit autoupdate ([#1189](https://github.com/4DNucleome/PartSeg/pull/1189))
-- Auto add "skip check PR title"  label in update dependencies PR ([#1199](https://github.com/4DNucleome/PartSeg/pull/1199))
+- Auto add "skip check PR title" label in update dependencies PR ([#1199](https://github.com/4DNucleome/PartSeg/pull/1199))
 
 ### Build
 
@@ -172,7 +172,7 @@ This release drop support for python 3.8 and napari below 0.4.19.
 - Move coverage back to main workflow ([#1055](https://github.com/4DNucleome/PartSeg/pull/1055))
 - \[pre-commit.ci\] pre-commit autoupdate ([#1056](https://github.com/4DNucleome/PartSeg/pull/1056))
 - \[pre-commit.ci\] pre-commit autoupdate ([#1059](https://github.com/4DNucleome/PartSeg/pull/1059))
-- Update `actions/upload-artifact` and  `actions/download-artifact` from 3 to 4 ([#1062](https://github.com/4DNucleome/PartSeg/pull/1062))
+- Update `actions/upload-artifact` and `actions/download-artifact` from 3 to 4 ([#1062](https://github.com/4DNucleome/PartSeg/pull/1062))
 - \[pre-commit.ci\] pre-commit autoupdate ([#1064](https://github.com/4DNucleome/PartSeg/pull/1064))
 - Group actions update ([#1065](https://github.com/4DNucleome/PartSeg/pull/1065))
 - \[pre-commit.ci\] pre-commit autoupdate ([#1068](https://github.com/4DNucleome/PartSeg/pull/1068))
@@ -253,7 +253,7 @@ This release drop support for python 3.8 and napari below 0.4.19.
 ### 🐛 Bug Fixes
 
 - Fix possible problem of double registration napari plugin in PartSeg bundle ([#974](https://github.com/4DNucleome/PartSeg/pull/974))
-- Bump OS versions for part of testing workflows.  ([#977](https://github.com/4DNucleome/PartSeg/pull/977))
+- Bump OS versions for part of testing workflows. ([#977](https://github.com/4DNucleome/PartSeg/pull/977))
 - Bump os version for main tests workflow. ([#979](https://github.com/4DNucleome/PartSeg/pull/979))
 - Ensure that the module `PartSegCore.channel_class` is present in bundle ([#980](https://github.com/4DNucleome/PartSeg/pull/980))
 - Lower npe2 schema version to work with older napari version ([#981](https://github.com/4DNucleome/PartSeg/pull/981))
@@ -472,11 +472,11 @@ This release drop support for python 3.8 and napari below 0.4.19.
 
 ### 🚜 Refactor
 
-- Clean potential vulnerabilities  ([#630](https://github.com/4DNucleome/PartSeg/pull/630))
+- Clean potential vulnerabilities ([#630](https://github.com/4DNucleome/PartSeg/pull/630))
 
 ### 🧪 Testing
 
-- Add more tests for common GUI elements  ([#622](https://github.com/4DNucleome/PartSeg/pull/622))
+- Add more tests for common GUI elements ([#622](https://github.com/4DNucleome/PartSeg/pull/622))
 - Report coverage per package. ([#639](https://github.com/4DNucleome/PartSeg/pull/639))
 - Update conda environment to not use PyQt5 in test ([#646](https://github.com/4DNucleome/PartSeg/pull/646))
 - Add tests files to calculate coverage ([#655](https://github.com/4DNucleome/PartSeg/pull/655))
@@ -714,13 +714,13 @@ This release drop support for python 3.8 and napari below 0.4.19.
 
 ### Features
 
-- Add CellFromNucleusFlow "Cell from nucleus flow" cell segmentation method  (#367)
+- Add CellFromNucleusFlow "Cell from nucleus flow" cell segmentation method (#367)
 - When cutting components in PartSeg ROI mask allow not masking outer data (#379)
 - Theme selection in GUI (#381)
 - Allow return points from ROI extraction algorithm (#382)
 - Add measurement to get ROI annotation by name. (#386)
 - PartSeg ROI extraction algorithms as napari plugins (#387)
-- Add  Pearson, Mander's, Intensity, Spearman colocalization measurements (#392)
+- Add Pearson, Mander's, Intensity, Spearman colocalization measurements (#392)
 - Separate standalone napari settings from PartSeg embedded napari settings (#397)
 
 ### Performance
@@ -921,7 +921,7 @@ This release drop support for python 3.8 and napari below 0.4.19.
 ## 0.9.6
 
 - fix bug in loading project with mask
-- upgrade PyInstaller version (bug  GHSA-7fcj-pq9j-wh2r)
+- upgrade PyInstaller version (bug GHSA-7fcj-pq9j-wh2r)
 
 ## 0.9.5
 
