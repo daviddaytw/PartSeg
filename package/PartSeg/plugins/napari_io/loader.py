@@ -1,6 +1,6 @@
+import os
 import typing
 from importlib.metadata import version
-from os import path
 
 import numpy as np
 from packaging.version import parse as parse_version
@@ -10,6 +10,7 @@ from PartSegCore import UNIT_SCALE
 from PartSegCore.analysis import ProjectTuple
 from PartSegCore.io_utils import LoadBase, WrongFileTypeException
 from PartSegCore.mask.io_functions import MaskProjectTuple
+from PartSegCore.universal_const import format_layer_name
 from PartSegImage import Image
 
 
@@ -55,7 +56,8 @@ else:
 
 
 def _image_to_layers(project_info, scale, translate):
-    layer_name_prefix = path.basename(project_info.file_path)
+    settings = get_settings()
+    filename = os.path.basename(project_info.file_path)
     res_layers = []
     if project_info.image.name == "ROI" and project_info.image.channels == 1:
         res_layers.append(
@@ -63,7 +65,9 @@ def _image_to_layers(project_info, scale, translate):
                 project_info.image.get_channel(0),
                 {
                     "scale": scale,
-                    "name": f"{layer_name_prefix} {project_info.image.channel_names[0]}",
+                    "name": format_layer_name(
+                        settings.layer_naming_format, filename, project_info.image.channel_names[0]
+                    ),
                     "translate": translate,
                 },
                 "labels",
@@ -75,7 +79,9 @@ def _image_to_layers(project_info, scale, translate):
                 project_info.image.get_channel(i),
                 {
                     "scale": scale,
-                    "name": f"{layer_name_prefix} {project_info.image.channel_names[i]}",
+                    "name": format_layer_name(
+                        settings.layer_naming_format, filename, project_info.image.channel_names[i]
+                    ),
                     "blending": "additive",
                     "translate": translate,
                     "metadata": project_info.image.metadata,
