@@ -39,4 +39,4 @@ def format_layer_name(layer_format: LayerNamingFormat, file_name: str, channel_n
         return f"{file_name} | {channel_name}"
     if layer_format == LayerNamingFormat.channel_filename:
         return f"{channel_name} | {file_name}"
-    raise ValueError("Unknown format")
+    raise ValueError("Unknown format")  # pragma: no cover
